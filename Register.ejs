@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register Form</title>
+<!-- Link to Tailwind CSS -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+/* design for flash messages */
+.flash-message {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.flash-message.success {
+  background-color: #4CAF50; /* Green for success */
+  color: white;
+}
+.flash-message.error {
+  background-color: #f44336; /* Red for error */
+  color: white;
+}
+</style>
+</head>
+<body class="bg-gray-900 text-white p-6 flex items-center justify-center min-h-screen">
+
+    <!-- Flash message container -->
+    <form id="flash-message" class="flash-message"></form>
+
+    <!-- Registration form -->
+    <form action="/register" method="POST" id="register-form" class="bg-gray-800 p-6 rounded shadow-md w-full max-w-sm">
+        <h2 class="text-3xl font-bold mb-4 text-center text-blue-400">Register First</h2>
+        
+        <label for="username" class="block text-gray-300">Username or Email:</label>
+        <input type="text" id="username" name="username" required class="w-full p-2 mb-3 border rounded bg-gray-700 text-white" placeholder="Enter your username or email"><br>
+        
+        <label for="password" class="block text-gray-300">Password:</label>
+        <input type="password" id="password" name="password" required class="w-full p-2 mb-3 border rounded bg-gray-700 text-white" placeholder="Enter your password"><br>
+        
+        <label class="block text-gray-300">
+            <input type="checkbox" id="remember" name="remember" class="mr-2 mt-1">
+            Remember Me
+        </label><br>
+
+        <!-- Register button -->
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mb-8">
+          Register Please!!
+      </button>
+
+    </form>
+
+    <script>
+   
+    // Function to show flash messages
+    function showFlashMessage(message, type) {
+      const flashMessage = document.getElementById('flash-message');
+      flashMessage.textContent = message;
+      flashMessage.className = `flash-message ${type}`;
+      flashMessage.style.opacity = '1';
+
+      setTimeout(() => {
+        flashMessage.style.opacity = '0';
+      }, 3000); // Message will disappear after 3 seconds
+    }
+
+    // Handle form submission using JavaScript
+    document.getElementById('register-form').addEventListener('submit', function(event) {
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (username && password) {
+        showFlashMessage('Registration successful!', 'success');
+      } else {
+        showFlashMessage('Please fill in all fields.', 'error');
+      }
+    });
+    </script>
+</body>
+</html>
