@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<script> 
+    // JavaScript function to redirect to the 'skills' page
+    function redirectSkills() { 
+        window.location.href = 'skills'; 
+    } 
+</script>
+
+<body class="bg-black h-screen flex flex-col justify-between m-5">
+    
+  <div class="flex flex-col justify-center items-center font-bold mt-10 text-white"> 
+        <div>
+            <p class="text-6xl text-bold"> <i> Education Background!! </i> </p> 
+         </div>
+         <div> 
+            <p class="text-8xl opacity-15 text-bold">Education </p>
+        </div>
+        <p class="text-xl opacity-20 mb-10"><i> Below are the study details of Pooja!!. </i></p>
+    </div>
+
+</div>  
+
+<!-- Junior Studies Card -->
+<div class="w-full max-w-md bg-slate-800 p-8 rounded-lg shadow-lg text-white m-6 flex flex-col justify-center items-start mx-auto 
+hover:scale-105 transition-transform duration-300 ease-in-out">
+    <p class="text-2xl font-bold mb-4">Junior Studies (6th-10th)</p>
+    <p class="text-lg mb-2">Jawahar Navodaya Vidyalaya, Ranikhet</p>
+    <p class="text-base text-center">
+        CBSE curriculum with a focus on national integration through a three-language formula.
+    </p>
+</div>
+<a href="https://navodaya.gov.in/nvs/nvs-school/ALMORA/en/about_us/About-JNV/" class="text-xl font-bold text-red-400 flex justify-center items-center mt-6 hover:underline">Visit JNV Ranikhet</a>
+
+<!-- Higher Studies Card -->
+<div class="w-full max-w-md bg-slate-800 p-8 rounded-lg shadow-lg text-white m-6 flex flex-col justify-center items-center mx-auto hover:scale-105 transition-transform duration-300 ease-in-out">
+    <p class="text-2xl font-bold mb-4">Higher Studies (11th-12th)</p>
+    <p class="text-lg mb-2">Completed 11th from JNV Ranikhet</p>
+    <p class="text-lg mb-2">Completed 12th from SGNP Ramnagar</p>
+    <p class="text-base text-center">
+        SGNP is affiliated with CBSE and focuses on holistic education.
+    </p>
+</div>
+<a href="https://www.sgnpsbasai.com/" class="text-xl font-bold text-red-400 flex justify-center items-center mt-6 hover:underline">Visit SGNP</a>
+
+<!-- College Studies Card -->
+<div class="w-full max-w-sm bg-slate-800 p-8 rounded-lg shadow-lg text-white m-6 flex flex-col justify-center items-center mx-auto hover:scale-105 transition-transform duration-300 ease-in-out">
+    <p class="text-2xl font-bold mb-4">College Studies</p>
+    <p class="text-lg mb-4">B.Tech (CSE)</p>
+    <p class="text-base text-center">
+        Pursuing my Bachelor's degree in Computer Science from <span class="text-red-400">NIET</span>.
+    </p>
+</div>
+    
+<a href="https://www.niet.co.in/" class="text-xl font-bold text-red-400 flex justify-center items-center mt-6 hover:underline">Visit NIET</a>
+    
+<!-- Button to redirect to the skills page -->
+<button class="w-64 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full m-5 mb-50 mx-auto block" onClick="redirectSkills()">
+    Skill Set
+</button>
+    
+</body>
+</html>
